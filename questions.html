@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="main.css">
+</head>
+  
+<body>
+    <div id="navbar">
+        <ul id="nav-ul">
+            <li id="nav-li"><a href="index.html">Home</a></li>
+            <li id="nav-li"><a href="questions.html">Questionnaire</a></li>
+            <li id="nav-li"><a href="adoption.html">Adoption</a></li>
+            <li id="nav-li"><a href="about.html">About</a></li>
+        
+        </ul>
+    </div>
+
+    <h1>Dog compatibility questionnaire</h1>
+  
+    <!-- Create Form -->
+    <form id="form" onsubmit="myFunction(event)">
+ 
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+ 
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name" />
+        </div>
+  
+  
+        <div class="form-control">
+            <label for="persona" id="label-persona">
+                What would describe you best?
+            </label>
+             
+            <!-- Dropdown options -->
+            <select name="persona" id="persona">
+                <option value="introvert">Introvert</option>
+                <option value="extrovert">Extrovert</option>
+                <option value="bitofboth">A bit of both</option>
+            </select>
+        </div>
+  
+        <div class="form-control">
+            <label>
+                What size of dog are you after?
+            </label>
+ 
+            <select name="sizeofdog" id="sizeofdog">
+                <option value="small">Small-sized doggo</option>
+                <option value="medium">Medium-sized doggo</option>
+                <option value="big">Big-sized doggo</option>
+                <option value="indifferent">Indifferent - any kind of doggo</option>
+            </select>
+        </div>
+
+        <div class="form-control">
+            <label>
+                How active are you?
+            </label>
+ 
+            <select name="activity" id="activity">
+                <option value="couchpotato">Couch potato style of human</option>
+                <option value="gym">Gym afficionado</option>
+                <option value="regular">Regular type of human that goes of a walk</option>
+            </select>
+        </div>
+            
+
+  
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit" element onsubmit="myScript">
+            Submit
+        </button>
+    </form>
+
+    <div id="bodyflex">
+
+        <div class="container">  
+            <div class="child div1">
+            <img src="img/monkey1.jpg" alt="1">
+                <p>This is image 1</p>
+            </div>
+    
+            <div class="child div2">
+                <img src="img/monkey1.jpg" alt="2">
+                <p>This is image 2</p>
+            </div>
+    
+            <div class="child div3">
+                <img src="img/monkey1.jpg" alt="3">
+                <p>This is image 3</p>
+            </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+  
+</html>
