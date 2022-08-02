@@ -1,30 +1,44 @@
-function myFunction(event) {
+// function myFunctionA(event) {
 
-    event.preventDefault();
-    console.log(event);
+//     event.preventDefault();
+//     console.log(event);
 
-    document.getElementById('form').style.display ='none';
-    document.getElementById('wrap').style.display = 'block';
+//     document.getElementById('form').style.display ='none';
+//     document.getElementById('wrap').style.display = 'block';
+// }
 
 function myFunction(showStuff) {
 
-    // This works but shows all the images
 
-        // let divs = document.getElementById('wrap');
+    showStuff.preventDefault();
+    
+    document.getElementById('form').style.display ='none';
+    
+    let dogs = document.querySelectorAll('.product_grid');
+    dogs.forEach(e => {e.style.display ='none'});
+    
+        let divPersona = document.querySelectorAll("[data-personality='" + persona.value + "']");
+        console.log("[data-personality='" + persona.value + "']");
+        divPersona.forEach(divP => {
+            divP.style.display = 'block';
+        })
 
-        // if (persona.value == 'introvert') {
-        //     divs.style.display = 'block';
+        let divSize = document.querySelectorAll("[data-size='" + sizeofdog.value + "']");
+        console.log("[data-sizeofdog='" + sizeofdog.value + "']");
+        divSize.forEach(divS => {
+        divS.style.display = 'block';
+        })
 
+        let divActivity = document.querySelectorAll("[data-activity='" + activity.value + "']");
+        console.log("[data-personality='" + activity.value + "']");
+        divActivity.forEach(divA => {
+        divA.style.display = 'block';
+        })
 
-    // This doesn't work and should show only product_img_2 and hide product_img_3 when introvert is chosen
-        let divs = document.querySelectorAll('.product_grid,.column_2,.product_img_2');
-        if (persona.value == 'introvert') {
-
-            divs.style.display = 'block';
-            document.querySelector('.product_img_3').style.display='none';
+        /*alert('Scroll down to see the result!')*/
             
-
-           }
-            
-        }
     }
+function showDiv(id, text, btn){
+    document.getElementById(id).style.display = 'block';
+    btn.style.display = 'none';
+}
